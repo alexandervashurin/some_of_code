@@ -1,6 +1,9 @@
+import timeit
+
+
 def decorator(func):
     def this_is_decorator():
-        print("Это декоратор")
+        print("Это декоратор " + f'{func} ' + str(timeit.timeit()))
         func()
 
     return this_is_decorator
@@ -9,7 +12,6 @@ def decorator(func):
 # некоторые функции
 
 def my_name():
-
     print('Саша')
 
 
